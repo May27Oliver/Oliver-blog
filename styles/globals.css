@@ -118,6 +118,9 @@ html {
 }
 
 /* markdown */
+.react-markdown {
+  @apply break-words overflow-hidden;
+}
 .react-markdown h1 {
   @apply my-2 text-2xl font-semibold;
 }
@@ -133,11 +136,19 @@ html {
 }
 
 .react-markdown pre {
-  @apply mt-10;
+  @apply my-8;
+}
+
+.react-markdown img {
+  @apply my-3;
 }
 
 .react-markdown pre div {
   @apply rounded-[5px];
+}
+
+.react-markdown a {
+  @apply text-xl text-blue-900 my-3;
 }
 
 @media screen and (min-width: 1024px) {

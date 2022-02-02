@@ -3,11 +3,16 @@ import { ContentsType } from "interfaces";
 export const BlogTopics: ContentsType[] = [
   {
     topic: "Javascript",
-    subTopic: [{ title: "basic javascript", id: "basic javascript" }],
+    subTopic: [{ title: "解構賦值", id: "destructuring-assignment" }],
   },
   {
     topic: "React.js",
-    subTopic: [{ title: "如何寫好jsx", id: "如何寫好jsx" }],
+    subTopic: [
+      {
+        title: "如何開始一個新的React專案",
+        id: "start-new-react-project",
+      },
+    ],
   },
   {
     topic: "Next.js",
@@ -22,8 +27,11 @@ export const BlogTopics: ContentsType[] = [
     subTopic: [{ title: "Docker Image", id: "Docker Image" }],
   },
   {
-    topic: "Linux",
-    subTopic: [{ title: "Linux Command", id: "Linux Command" }],
+    topic: "Command Tools",
+    subTopic: [
+      { title: "Linux Command", id: "Linux Command" },
+      { title: "npm and yarn", id: "npm-yarn" },
+    ],
   },
   {
     topic: "Algorithm",

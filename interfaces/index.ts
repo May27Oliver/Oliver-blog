@@ -11,5 +11,5 @@ export type User = {
 
 export type ContentsType = {
   topic: string;
-  subTopic: { title: string; id: string }[];
+  subTopic?: { title: string; id: string }[];
 };

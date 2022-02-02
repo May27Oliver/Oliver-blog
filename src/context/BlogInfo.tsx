@@ -6,7 +6,7 @@ interface BlogInfo {
 }
 
 const initialState: BlogInfo = {
-  keyname: "binary-search",
+  keyname: "start-new-react-project",
 };
 
 type Action = {

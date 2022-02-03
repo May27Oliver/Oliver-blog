@@ -7,7 +7,7 @@ interface BlogInfo {
 }
 
 const initialState: BlogInfo = {
-  title: "如何開始一個新的React專案",
+  title: "歡迎光臨Oliver雜貨鋪",
   keyname: "start-new-react-project",
 };
 

@@ -14,12 +14,20 @@ interface BlogProps {
 }
 
 const BlogPages: React.FC<BlogProps> = ({ blog }) => {
+  const {
+    content,
+    data: { title, date },
+  } = matter(blog);
   return (
-    <Layout title="部落格 | Oliver雜貨鋪">
+    <Layout title={`${title} | Oliver雜貨鋪`}>
       <div className="h-[100vh] overflow-hidden">
         <div className="desktop h-nav-height mt-[60px] flex flex-row overflow-hidden">
           <BlogLeftSideColumn />
-          <BlogContent bgcontent={blog || "無資料"} />
+          <BlogContent
+            content={content || "無資料"}
+            date={date.toString()}
+            title={title}
+          />
           {/* <div className="hidden flex-blog-right-side border border-solid border-slate-300 lg:block"></div> */}
         </div>
       </div>

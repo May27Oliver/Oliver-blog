@@ -5,14 +5,12 @@ import remarkGfm from "remark-gfm";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
 type BlogContentType = {
-  bgcontent: string;
+  title: string;
+  content: string;
+  date: string;
 };
 
-const Content: React.FC<BlogContentType> = ({ bgcontent }) => {
-  const {
-    content,
-    data: { slug, title, date, description },
-  } = matter(bgcontent);
+const Content: React.FC<BlogContentType> = ({ content, date, title }) => {
   return (
     <div className="py-8 px-8 grow lg:basis-[50%] overflow-scroll">
       <h1 className="text-title-size font-bold">{title}</h1>

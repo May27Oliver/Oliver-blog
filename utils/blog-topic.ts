@@ -3,7 +3,10 @@ import { ContentsType } from "interfaces";
 export const BlogTopics: ContentsType[] = [
   {
     topic: "Javascript",
-    subTopic: [{ title: "解構賦值", id: "destructuring-assignment" }],
+    subTopic: [
+      { title: "解構賦值", id: "destructuring-assignment" },
+      { title: "import和export", id: "import-export" },
+    ],
   },
   {
     topic: "React.js",
@@ -11,6 +14,18 @@ export const BlogTopics: ContentsType[] = [
       {
         title: "如何開始一個新的React專案",
         id: "start-new-react-project",
+      },
+      {
+        title: "什麼是JSX",
+        id: "jsx",
+      },
+      {
+        title: "React Component",
+        id: "react-component",
+      },
+      {
+        title: "React Ref",
+        id: "react-ref",
       },
     ],
   },
@@ -71,6 +86,6 @@ export const BlogTopics: ContentsType[] = [
   },
   {
     topic: "Codepen嘗試集",
-    subTopic: [{ title: "scroll", id: "10" }],
+    subTopic: [{ title: "React側邊欄練習", id: "react-navbar" }],
   },
 ];

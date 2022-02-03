@@ -2,23 +2,29 @@ import React, { Reducer } from "react";
 import { createContext } from "./createContext";
 
 interface BlogInfo {
+  title: string;
   keyname: string;
 }
 
 const initialState: BlogInfo = {
+  title: "如何開始一個新的React專案",
   keyname: "start-new-react-project",
 };
 
 type Action = {
   type: "CHANGE_KEYNAME";
-  payload: string;
+  payload: {
+    title: string;
+    keyname: string;
+  };
 };
 
 const reducer: Reducer<BlogInfo, Action> = (state, action) => {
   switch (action.type) {
     case "CHANGE_KEYNAME":
       return {
-        keyname: action.payload,
+        title: action.payload.title,
+        keyname: action.payload.keyname,
       };
   }
 };

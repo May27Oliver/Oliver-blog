@@ -7,27 +7,19 @@ import { GetStaticProps, GetStaticPaths } from "next";
 import BlogContent from "src/components/BlogContent";
 import fs from "fs";
 import path from "path";
-import matter from "gray-matter";
-
+import { useBlogInfoStateContext } from "src/context/BlogInfo";
 interface BlogProps {
   blog: string;
 }
 
 const BlogPages: React.FC<BlogProps> = ({ blog }) => {
-  const {
-    content,
-    data: { title, date },
-  } = matter(blog);
+  const { title } = useBlogInfoStateContext();
   return (
     <Layout title={`${title} | Oliver雜貨鋪`}>
       <div className="h-[100vh] overflow-hidden">
         <div className="desktop h-nav-height mt-[60px] flex flex-row overflow-hidden">
           <BlogLeftSideColumn />
-          <BlogContent
-            content={content || "無資料"}
-            date={date}
-            title={title}
-          />
+          <BlogContent bgcontent={blog || "無資料"} />
           {/* <div className="hidden flex-blog-right-side border border-solid border-slate-300 lg:block"></div> */}
         </div>
       </div>

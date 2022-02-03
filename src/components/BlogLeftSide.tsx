@@ -101,7 +101,10 @@ const SubTopicLayer: React.FC<SubTopicType> = ({ select, subTopic }) => {
             select ? "opacity-100 h-10" : "opacity-0 h-0"
           } rounded-[5px] ml-2 pl-2 hover:bg-slate-100 leading-10 transition-font-hover cursor-pointer`}
           onClick={() => {
-            dispatch({ type: "CHANGE_KEYNAME", payload: topic.id });
+            dispatch({
+              type: "CHANGE_KEYNAME",
+              payload: { title: topic.title, keyname: topic.id },
+            });
             router.push(`/blog/${topic.id}`, undefined, { shallow: false });
           }}
         >

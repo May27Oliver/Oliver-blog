@@ -130,9 +130,12 @@ html {
 .react-markdown h3 {
   @apply my-2 text-xl font-semibold;
 }
+.react-markdown h4 {
+  @apply my-2 text-lg font-semibold;
+}
 
 .react-markdown p {
-  @apply leading-[1.5];
+  @apply leading-[1.5] text-base;
 }
 
 .react-markdown pre {

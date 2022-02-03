@@ -7,7 +7,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 type BlogContentType = {
   title: string;
   content: string;
-  date: string;
+  date: any;
 };
 
 const Content: React.FC<BlogContentType> = ({ content, date, title }) => {

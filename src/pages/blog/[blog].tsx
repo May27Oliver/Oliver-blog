@@ -25,7 +25,7 @@ const BlogPages: React.FC<BlogProps> = ({ blog }) => {
           <BlogLeftSideColumn />
           <BlogContent
             content={content || "無資料"}
-            date={date.toString()}
+            date={date}
             title={title}
           />
           {/* <div className="hidden flex-blog-right-side border border-solid border-slate-300 lg:block"></div> */}

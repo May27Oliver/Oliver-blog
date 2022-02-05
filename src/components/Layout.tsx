@@ -36,7 +36,6 @@ const Layout: React.FC<Props> = ({
               <a
                 className="hover:text-lime-hover transition-font-hover cursor-pointer"
                 onClick={() => {
-                  alert(keyname);
                   router.push(`/blog/${keyname}`, undefined, {
                     shallow: false,
                   });

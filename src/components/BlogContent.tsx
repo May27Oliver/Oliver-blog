@@ -14,7 +14,7 @@ const Content: React.FC<BlogContentType> = ({ bgcontent }) => {
     data: { slug, title, date, description },
   } = matter(bgcontent);
   return (
-    <div className="py-8 px-8 grow lg:basis-[50%] overflow-scroll">
+    <div className="blog-center-content py-8 px-8 grow lg:basis-[50%] overflow-y-scroll">
       <h1 className="text-title-size font-bold">{title}</h1>
       <div className="react-content-date-time my-3 text-sm text-neutral-500 box-border pl-2">
         {date}

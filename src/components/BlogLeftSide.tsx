@@ -10,7 +10,7 @@ const BlogLeftSideColumn: React.FC = () => {
   const [openList, setOpenList] = React.useState<Boolean>(true);
   return (
     <div
-      className={`bg-white left-nav basis-[80%] sm:basis-[30%] border border-solid border-slate-300 relative overflow-scroll transition-blog-left-side ${
+      className={`left-side-nav bg-white left-nav basis-[80%] sm:basis-[30%] border border-solid border-slate-300 relative overflow-y-scroll transition-blog-left-side ${
         openList ? "lg:basis-[300px]" : "lg:basis-[3%]"
       } lg:block`}
     >

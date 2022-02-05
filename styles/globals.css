@@ -44,7 +44,18 @@ html {
   letter-spacing: 1px;
   color: #4a4a4a;
 }
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 0;
+}
 
+.blog-center-content::-webkit-scrollbar {
+  width: 0.4vw;
+}
+.blog-center-content::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, #ccc);
+  border-radius: 6px;
+}
 /* toolkits */
 .hamburgur {
   @apply w-[60px] h-[60px] flex flex-col justify-center items-center relative cursor-pointer;

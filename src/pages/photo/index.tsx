@@ -19,24 +19,24 @@ import Whale2 from "public/image/whale2.jpg";
 const Photography: NextPage = () => (
   <Layout title="攝影 | Oliver雜貨鋪">
     <div className="photo-component mt-32 flex flex-wrap flex-row px-1">
-      <div className="grow-[25%] max-w-[25%] px-1">
+      <div className="grow-[50%] max-w-[50%] sm:grow-[25%] sm:max-w-[25%] px-1">
         <Image src={Street1} width={500} height={350} objectFit="contain" />
         <Image src={Neko1} width={500} height={350} objectFit="contain" />
         <Image src={Street2} width={500} height={350} objectFit="contain" />
         <Image src={Dog} width={500} height={350} objectFit="contain" />
       </div>
-      <div className="grow-[25%] max-w-[25%] px-1">
+      <div className="grow-[50%] max-w-[50%] sm:grow-[25%] sm:max-w-[25%] px-1">
         <Image src={Whale2} width={500} height={350} objectFit="contain" />
         <Image src={Street3} width={500} height={350} objectFit="contain" />
         <Image src={Forbid} width={500} height={350} objectFit="contain" />
       </div>
-      <div className="grow-[25%] max-w-[25%] px-1">
+      <div className="grow-[50%] max-w-[50%] sm:grow-[25%] sm:max-w-[25%] px-1">
         <Image src={Neko} width={500} height={350} objectFit="contain" />
         <Image src={Street5} width={500} height={350} objectFit="contain" />
         <Image src={Tree} width={500} height={350} objectFit="contain" />
         <Image src={Food} width={500} height={350} objectFit="contain" />
       </div>
-      <div className="grow-[25%] max-w-[25%] px-1">
+      <div className="grow-[50%] max-w-[50%] sm:grow-[25%] sm:max-w-[25%] px-1">
         <Image src={Street6} width={500} height={350} objectFit="contain" />
         <Image src={Town} width={500} height={350} objectFit="contain" />
         <Image src={Whale1} width={500} height={350} objectFit="contain" />

@@ -154,6 +154,11 @@ html {
   @apply text-xl text-blue-900 my-3;
 }
 
+/* 攝影 */
+.photo-component img {
+  position: static;
+  height: auto !important;
+}
 @media screen and (min-width: 1024px) {
   .hamburgur {
     @apply hidden;

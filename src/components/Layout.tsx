@@ -24,6 +24,7 @@ const Layout: React.FC<Props> = ({
         <title>{title}</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <link rel="shortcut icon" href="/oliv.png" />
       </Head>
       <div className="shadow-md shadow-[#e1dede] fixed w-full top-0 bg-slate-50 z-10">
         <Wrap>

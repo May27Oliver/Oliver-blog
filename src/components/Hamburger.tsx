@@ -1,8 +1,10 @@
 import React from "react";
 import { useRouter } from "next/router";
+import { useBlogInfoStateContext } from "src/context/BlogInfo";
 
 const Hamburger: React.FC = () => {
   const [hamActive, setHamActive] = React.useState<boolean>(false);
+  const { keyname } = useBlogInfoStateContext();
   const router = useRouter();
   return (
     <>
@@ -21,7 +23,7 @@ const Hamburger: React.FC = () => {
           className="w-full leading-10 text-center cursor-pointer hover:text-lime-hover hover:bg-slate-100"
           onClick={() => {
             setHamActive(false);
-            router.push("/blog");
+            router.push(`/blog/${keyname}`);
           }}
         >
           部落格

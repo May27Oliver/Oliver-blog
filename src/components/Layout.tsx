@@ -4,6 +4,7 @@ import Head from "next/head";
 import Wrap from "./Wrap";
 import Hamburger from "./Hamburger";
 import { useBlogInfoStateContext } from "src/context/BlogInfo";
+import { useRouter } from "next/router";
 
 type Props = {
   children?: ReactNode;
@@ -15,6 +16,8 @@ const Layout: React.FC<Props> = ({
   title = "This is the default title",
 }: Props) => {
   const { keyname } = useBlogInfoStateContext();
+  const router = useRouter();
+
   return (
     <>
       <Head>
@@ -29,12 +32,19 @@ const Layout: React.FC<Props> = ({
               <Link href="/">Oliver雜貨鋪</Link>
             </div>
             <nav className="leading-[60px] hidden lg:block">
-              <Link href={`/blog/${keyname}`}>
-                <a className="hover:text-lime-hover transition-font-hover">
-                  部落格
-                </a>
-              </Link>{" "}
-              |{" "}
+              {/* <Link href={`/blog/${keyname}`}> */}
+              <a
+                className="hover:text-lime-hover transition-font-hover cursor-pointer"
+                onClick={() => {
+                  alert(keyname);
+                  router.push(`/blog/${keyname}`, undefined, {
+                    shallow: false,
+                  });
+                }}
+              >
+                部落格
+              </a>
+              {/* </Link> */} |{" "}
               <Link href="/photo">
                 <a className="hover:text-lime-hover transition-font-hover">
                   攝影

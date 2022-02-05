@@ -11,7 +11,7 @@ const BlogLeftSideColumn: React.FC = () => {
   return (
     <div
       className={`left-side-nav bg-white left-nav basis-[80%] sm:basis-[30%] border border-solid border-slate-300 relative overflow-y-scroll transition-blog-left-side ${
-        openList ? "lg:basis-[300px]" : "lg:basis-[3%]"
+        openList ? "lg:basis-[300px]" : "lg:basis-[2vw]"
       } lg:block`}
     >
       <div className="px-2 py-4">

@@ -23,13 +23,14 @@ const BlogLeftSideColumn: React.FC = () => {
       </div>
       {openList ? (
         <div
-          className="hidden lg:block sticky h-8 w-full bottom-0 left-0 bg-white border border-solid border-slate-300 text-center leading-8"
+          className="hidden lg:flex lg:justify-center sticky h-8 w-full bottom-0 left-0 bg-white border border-solid border-slate-300 text-center leading-8"
           onClick={() => setOpenList(false)}
         >
           <FontAwesomeIcon
             className="font-awesome-icon close-blog-list"
             icon={fas.faArrowLeft}
-            size="lg"
+            style={{ fontSize: "10px" }}
+            size="xs"
           />
         </div>
       ) : (
@@ -45,7 +46,7 @@ const BlogLeftSideColumn: React.FC = () => {
           <FontAwesomeIcon
             className="font-awesome-icon close-blog-list"
             icon={fas.faArrowRight}
-            size="lg"
+            size="xs"
           />
         </div>
       )}

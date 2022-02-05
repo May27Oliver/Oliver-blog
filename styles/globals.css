@@ -99,7 +99,7 @@ html {
 
 .show-nav-area:hover,
 .show-nav-area:active {
-  @apply w-[50%] h-[100vh] block;
+  @apply w-[80%] h-[100vh] block z-50;
 }
 .show-nav-area:hover > .show-nav-icon,
 .show-nav-area:active > .show-nav-icon {
@@ -115,7 +115,7 @@ html {
 
 .show-nav-area:hover > .left-nav,
 .show-nav-area:active > .left-nav {
-  @apply block;
+  @apply block box-border	pb-10;
   transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.8s;
 }
 
@@ -124,6 +124,9 @@ html {
 }
 
 /* font-awesome-icon */
+.font-awesome-icon.close-blog-list {
+  font-size: 10px;
+}
 .font-awesome-icon.close-blog-list path {
   color: #b2b2b2;
 }

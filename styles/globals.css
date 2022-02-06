@@ -169,10 +169,6 @@ html {
 }
 
 /* 攝影 */
-.photo-component img {
-  position: static;
-  height: auto !important;
-}
 @media screen and (min-width: 1024px) {
   .hamburgur {
     @apply hidden;

@@ -27,6 +27,9 @@ module.exports = {
       fontSize: {
         "title-size": "2.5rem",
       },
+      screens: {
+        "3xl": "1920px",
+      },
     },
   },
   plugins: [],

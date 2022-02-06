@@ -18,7 +18,7 @@ import Whale2 from "public/image/whale2.jpg";
 
 const Photography: NextPage = () => (
   <Layout title="攝影 | Oliver雜貨鋪">
-    <div className="photo-component mt-32 flex flex-wrap flex-row px-1">
+    <div className="photo-component mt-32 flex flex-wrap flex-row px-1 3xl:px-[15%]">
       <div className="grow-[50%] max-w-[50%] lg:grow-[25%] lg:max-w-[25%] px-1">
         <Image src={Street1} width={500} height={334} objectFit="contain" />
         <Image src={NekoSleep} width={500} height={334} objectFit="contain" />

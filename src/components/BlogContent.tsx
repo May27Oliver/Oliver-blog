@@ -17,7 +17,7 @@ const Content: React.FC<BlogContentType> = ({ bgcontent, openList }) => {
   return (
     <div
       className={`blog-center-content py-8 px-8 grow lg:basis-[70%] overflow-y-scroll ${
-        openList ? "lg:pr-[300px]" : "lg:px-[10%]"
+        openList ? "2xl:pr-[300px]" : "lg:px-[10%]"
       }`}
     >
       <h1 className="text-title-size font-bold">{title}</h1>

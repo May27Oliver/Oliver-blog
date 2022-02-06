@@ -50,7 +50,12 @@ export const BlogTopics: ContentsType[] = [
   },
   {
     topic: "Algorithm",
-    subTopic: [{ title: "Binary Search", id: "binary-search" }],
+    subTopic: [
+      { title: "Binary Search", id: "binary-search" },
+      { title: "Merge Sort", id: "merge-sort" },
+      { title: "Heap Sort", id: "heap-sort" },
+      { title: "Quick Sort", id: "quick-sort" },
+    ],
   },
   {
     topic: "Typescript",

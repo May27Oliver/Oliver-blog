@@ -14,12 +14,18 @@ interface BlogProps {
 
 const BlogPages: React.FC<BlogProps> = ({ blog }) => {
   const { title } = useBlogInfoStateContext();
+  const [openList, setOpenList] = React.useState<Boolean>(true);
   return (
     <Layout title={`${title} | Oliver雜貨鋪`}>
       <div className="h-[100vh] overflow-hidden">
         <div className="desktop h-nav-height mt-[60px] flex flex-row overflow-hidden">
-          <BlogLeftSideColumn />
-          <BlogContent bgcontent={blog || "無資料"} />
+          <BlogLeftSideColumn
+            openList={openList}
+            triggerOpenList={(bool: boolean) => {
+              setOpenList(bool);
+            }}
+          />
+          <BlogContent bgcontent={blog || "無資料"} openList={openList} />
           {/* <div className="hidden flex-blog-right-side border border-solid border-slate-300 lg:block"></div> */}
         </div>
       </div>

@@ -6,8 +6,15 @@ import { ContentsType } from "interfaces";
 import { useRouter } from "next/router";
 import { useBlogInfoDispatchContext } from "src/context/BlogInfo";
 
-const BlogLeftSideColumn: React.FC = () => {
-  const [openList, setOpenList] = React.useState<Boolean>(true);
+interface BlogLeftSideColumnType {
+  openList: Boolean;
+  triggerOpenList(bool: Boolean): void;
+}
+
+const BlogLeftSideColumn: React.FC<BlogLeftSideColumnType> = ({
+  triggerOpenList,
+  openList,
+}) => {
   return (
     <div
       className={`left-side-nav bg-white left-nav basis-[80%] sm:basis-[30%] border border-solid border-slate-300 relative overflow-y-scroll transition-blog-left-side ${
@@ -24,7 +31,7 @@ const BlogLeftSideColumn: React.FC = () => {
       {openList ? (
         <div
           className="hidden lg:flex lg:justify-center sticky h-8 w-full bottom-0 left-0 bg-white border border-solid border-slate-300 text-center leading-8"
-          onClick={() => setOpenList(false)}
+          onClick={() => triggerOpenList(false)}
         >
           <FontAwesomeIcon
             className="font-awesome-icon close-blog-list"
@@ -41,7 +48,7 @@ const BlogLeftSideColumn: React.FC = () => {
       ) : (
         <div
           className="absolute hidden lg:flex flex-col justify-center items-center h-full w-full top-0 border border-solid border-slate-300 text-center leading-8"
-          onClick={() => setOpenList(true)}
+          onClick={() => triggerOpenList(true)}
         >
           <FontAwesomeIcon
             className="font-awesome-icon close-blog-list"

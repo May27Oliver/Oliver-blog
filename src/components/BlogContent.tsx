@@ -5,16 +5,21 @@ import remarkGfm from "remark-gfm";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
 type BlogContentType = {
+  openList: Boolean;
   bgcontent: string;
 };
 
-const Content: React.FC<BlogContentType> = ({ bgcontent }) => {
+const Content: React.FC<BlogContentType> = ({ bgcontent, openList }) => {
   const {
     content,
     data: { slug, title, date, description },
   } = matter(bgcontent);
   return (
-    <div className="blog-center-content py-8 px-8 grow lg:basis-[50%] overflow-y-scroll">
+    <div
+      className={`blog-center-content py-8 px-8 grow lg:basis-[70%] overflow-y-scroll ${
+        openList ? "lg:pr-[300px]" : "lg:px-[10%]"
+      }`}
+    >
       <h1 className="text-title-size font-bold">{title}</h1>
       <div className="react-content-date-time my-3 text-sm text-neutral-500 box-border pl-2">
         {date}

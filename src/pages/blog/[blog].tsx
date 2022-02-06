@@ -38,7 +38,12 @@ const BlogPages: React.FC<BlogProps> = ({ blog }) => {
           />
         </div>
         {/* left-nav */}
-        <BlogLeftSideColumn />
+        <BlogLeftSideColumn
+          openList={openList}
+          triggerOpenList={(bool: boolean) => {
+            setOpenList(bool);
+          }}
+        />
       </div>
     </Layout>
   );

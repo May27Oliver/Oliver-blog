@@ -67,7 +67,7 @@ export const BlogTopics: ContentsType[] = [
   },
   {
     topic: "Flutter",
-    subTopic: [{ title: "Flutter", id: "Flutter" }],
+    subTopic: [{ title: "Flutter Enviorment", id: "flutter-enviorment" }],
   },
   {
     topic: "Dart",

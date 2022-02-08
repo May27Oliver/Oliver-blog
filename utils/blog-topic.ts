@@ -67,7 +67,15 @@ export const BlogTopics: ContentsType[] = [
   },
   {
     topic: "Flutter",
-    subTopic: [{ title: "Flutter Enviorment", id: "flutter-enviorment" }],
+    subTopic: [
+      { title: "Flutter Enviorment", id: "flutter-enviorment" },
+      { title: "Xcode and Android Emulator", id: "xcode-android-emulator" },
+      {
+        title: "Start a new flutter project",
+        id: "start-a-new-flutter-project",
+      },
+      { title: "Flutter Widget", id: "flutter-widget" },
+    ],
   },
   {
     topic: "Dart",

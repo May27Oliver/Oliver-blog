@@ -150,6 +150,7 @@ html {
 
 .react-markdown p {
   @apply leading-[1.5] text-base;
+  font-size: 1.1rem;
 }
 
 .react-markdown pre {

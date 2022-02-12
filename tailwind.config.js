@@ -30,6 +30,9 @@ module.exports = {
       screens: {
         "3xl": "1920px",
       },
+      backgroundImage: {
+        linkedIn: "url('/public/image/linkedin.png')",
+      },
     },
   },
   plugins: [],

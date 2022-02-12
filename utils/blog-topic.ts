@@ -35,7 +35,11 @@ export const BlogTopics: ContentsType[] = [
   },
   {
     topic: "Golang",
-    subTopic: [{ title: "Pointer", id: "Pointer" }],
+    subTopic: [
+      { title: "Go Enviroment", id: "go-enviroment" },
+      { title: "Go基礎語法", id: "go-basic" },
+      { title: "Pointer", id: "Pointer" },
+    ],
   },
   {
     topic: "Docker",

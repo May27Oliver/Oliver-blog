@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const AboutPage: NextPage = () => (
   <Layout title="關於我 | Oliver雜貨鋪">
     <div className="mt-32 max-w-[1024px] m-auto">
-      <div className="Name-head p-10 mb-10 flex flex-col md:flex-row lg:p-0">
+      <div className="Name-head p-10 md:mb-10 flex flex-col md:flex-row ">
         <div className="Name-col pr-5 border-b border-solid border-slate-900 basis-[60%]">
           <div className="Name text-5xl font-bold mb-5">Oliver Chen</div>
           <div className="Job-title mb-5">
@@ -48,7 +48,7 @@ const AboutPage: NextPage = () => (
           </div>
         </div>
       </div>
-      <div className="work-exp mb-10 p-10 lg:p-0">
+      <div className="work-exp mb-10 p-10 lg:py-0">
         <div className="job-title">
           <span className="font-medium text-xl">
             Software Engineer, APEX International Financial Engineering(
@@ -76,7 +76,7 @@ const AboutPage: NextPage = () => (
           </li>
         </ul>
       </div>
-      <div className="work-exp mb-10 p-10 lg:p-0">
+      <div className="work-exp mb-10 p-10 lg:py-0">
         <div className="job-title">
           <span className="font-medium text-xl">
             Software Engineer, DIGIWIN(
@@ -101,7 +101,7 @@ const AboutPage: NextPage = () => (
           </li>
         </ul>
       </div>
-      <div className="side-project">
+      <div className="side-project mb-10 p-10 lg:py-0">
         <div className="side-project-title font-medium text-xl">
           Side Projects：
         </div>

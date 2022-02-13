@@ -67,12 +67,12 @@ const AboutPage: NextPage = () => (
         </div>
         <ul className="pl-10 my-5">
           <li className="job-content list-disc my-2">
-            Developed Future system app for financial institution on
+            Developing Future system app for financial institution on
             smartphone,build with React,Typescript.
           </li>
           <li className="job-content list-disc">
-            Built the immediately update stock marquee system for securities
-            company,build with React,Typescript,Golang and MySQL.
+            Building the immediately update stock marquee system for securities
+            company, with React,Typescript,Golang and MySQL.
           </li>
         </ul>
       </div>

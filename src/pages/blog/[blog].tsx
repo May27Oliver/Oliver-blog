@@ -76,7 +76,7 @@ export const getStaticProps: GetStaticProps = async ({ params: { blog } }) => {
   } catch (err) {
     console.log(err);
   }
-  return { props: { blog: "無資料" } };
+  return { props: { blog: "筆記搬運施工中..." } };
 };
 
 export default BlogPages;

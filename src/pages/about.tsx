@@ -9,7 +9,9 @@ const AboutPage: NextPage = () => (
     <div className="mt-32 max-w-[1024px] m-auto">
       <div className="Name-head p-10 md:mb-10 flex flex-col md:flex-row ">
         <div className="Name-col pr-5 border-b border-solid border-slate-900 basis-[60%]">
-          <div className="Name text-5xl font-bold mb-5">Oliver Chen</div>
+          <div className="Name text-4xl md:text-5xl font-bold mb-5">
+            Oliver Chen
+          </div>
           <div className="Job-title mb-5">
             B.B.S.,Political Science,National Sun Yat-sen University 2013-2016
           </div>
@@ -50,7 +52,7 @@ const AboutPage: NextPage = () => (
       </div>
       <div className="work-exp mb-10 p-10 lg:py-0">
         <div className="job-title">
-          <span className="font-medium text-xl">
+          <span className="font-medium text-xl leading-[1.5]">
             Software Engineer, APEX International Financial Engineering(
             <a
               className="text-blue-900"
@@ -62,21 +64,21 @@ const AboutPage: NextPage = () => (
           </span>
           <span className="text-gray-500"> Feb 2021 - Present</span>
         </div>
-        <div className="job-skill text-gray-500 my-2">
+        <div className="job-skill text-gray-500 my-2 leading-[1.5]">
           React.js / NEXT.js / Typescript / Golang / Docker / MySQL / Flutter
         </div>
         <ul className="pl-10 my-5">
-          <li className="job-content list-disc my-2">
+          <li className="job-content list-disc my-2 leading-[1.5]">
             Developing Future system app for financial institution on
             smartphone,build with React,Typescript.
           </li>
-          <li className="job-content list-disc">
+          <li className="job-content list-disc leading-[1.5]">
             Building the immediately update stock marquee system for securities
             company, with React,Typescript,Golang and MySQL.
           </li>
         </ul>
       </div>
-      <div className="work-exp mb-10 p-10 lg:py-0">
+      <div className="work-exp mb-10 p-10 lg:py-0 leading-[1.5]">
         <div className="job-title">
           <span className="font-medium text-xl">
             Software Engineer, DIGIWIN(

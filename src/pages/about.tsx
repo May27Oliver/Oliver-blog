@@ -12,9 +12,7 @@ const AboutPage: NextPage = () => (
           <div className="Name text-4xl md:text-5xl font-bold mb-5">
             Oliver Chen
           </div>
-          <div className="Job-title mb-5">
-            B.B.S.,Political Science,National Sun Yat-sen University 2013-2016
-          </div>
+          <div className="Job-title mb-5">A Web developer.</div>
         </div>
         <div className="Link-col my-10 md:pl-10 md:my-0">
           <div className="link-url flex flex-row leading-[30px] mb-2">
@@ -53,7 +51,7 @@ const AboutPage: NextPage = () => (
       <div className="work-exp mb-10 p-10 lg:py-0">
         <div className="job-title">
           <span className="font-medium text-xl leading-[1.5]">
-            Software Engineer, APEX International Financial Engineering(
+            Software Engineer, APEX Financial Engineering(
             <a
               className="text-blue-900"
               href="http://www.apex.com.tw/index.php"
@@ -69,12 +67,13 @@ const AboutPage: NextPage = () => (
         </div>
         <ul className="pl-10 my-5">
           <li className="job-content list-disc my-2 leading-[1.5]">
-            Developing Future system app for financial institution on
-            smartphone,build with React,Typescript.
+            Develop an future system app on smartphone for financial
+            institutions like Bank SinoPac(永豐銀行),build by
+            React,Typescript,this project I focus on front-end.
           </li>
           <li className="job-content list-disc leading-[1.5]">
-            Building the immediately update stock marquee system for securities
-            company, with React,Typescript,Golang and MySQL.
+            Building the immediately updated stock marquee system for securities
+            company.
           </li>
         </ul>
       </div>
@@ -94,25 +93,32 @@ const AboutPage: NextPage = () => (
         </div>
         <ul className="pl-10 my-5">
           <li className="job-content list-disc my-2">
-            Developed user interface of SMES which run on factory production
-            line,connect APIs from Backend, and optimize user experience.
+            Developed the user interface of SMES which run on factory production
+            line, connected APIs from Backend, and optimized user experience
+            40%.
           </li>
           <li className="job-content list-disc my-2">
-            Developed user interface of QMS which make quality management easier
-            by software in factories.
+            Developed user interface of QMS and made quality management easier
+            by saving human resoures and time in factories.
           </li>
         </ul>
       </div>
       <div className="side-project mb-10 p-10 lg:py-0">
         <div className="side-project-title font-medium text-xl">
-          Side Projects：
+          Side Projects
         </div>
         <ul className="pl-10 my-5">
           <li className="project-content list-disc my-2">
             This Website : I record my IT learning road map in this Website,and
-            share to those who could have the same experience.
+            share with people having similar career paths and dream.
           </li>
         </ul>
+      </div>
+      <div className="side-project mb-10 p-10 lg:py-0">
+        <div className="side-project-title font-medium text-xl">Education:</div>
+        <div className="Job-title pl-10 mb-5 my-2">
+          B.B.S.,Political Science,National Sun Yat-sen University 2013-2016
+        </div>
       </div>
     </div>
   </Layout>

@@ -31,7 +31,12 @@ export const BlogTopics: ContentsType[] = [
   },
   {
     topic: "Next.js",
-    subTopic: [],
+    subTopic: [
+      {
+        title: "Prerendering",
+        id: "next-prerendering",
+      },
+    ],
   },
   {
     topic: "Golang",

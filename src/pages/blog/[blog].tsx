@@ -50,6 +50,7 @@ const BlogPages: React.FC<BlogProps> = ({ blog }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
+  //告訴dynamic route這裡要產生多少頁面。
   const files = fs.readdirSync(path.join("article"));
   const paths = files.map((filename) => ({
     params: {
@@ -59,7 +60,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths,
-    fallback: true,
+    fallback: "blocking",
   };
 };
 

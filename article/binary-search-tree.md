@@ -6,15 +6,11 @@ date: 3 Feb 2022
 ---
 
 tree is a graph without a loop。  
-&nbsp;  
-&nbsp;  
 樹是非循環的圖。  
 &nbsp;  
 &nbsp;  
-tree 每個 node 只能有一個 root  
-&nbsp;  
-&nbsp;
 tree must have a root,and the only root,  
+tree 每個 node 只能有一個 root  
 &nbsp;  
 &nbsp;
 
@@ -24,24 +20,18 @@ tree must have a root,and the only root,
 Binary Tree(二元樹)：每個 root 最多只能有兩個子元素。  
 Binary Search Tree：二元樹中， parent node > 右邊子節點 > 左邊子節點，稱為 Binary Search Tree。  
 &nbsp;  
-&nbsp;  
 以二元樹原則組成的資料結構在找尋資料的速度是很快的，為 O(log n)  
-&nbsp;  
 &nbsp;  
 Complete Binary Tree：是個幾乎滿的二元樹。  
 &nbsp;  
-&nbsp;  
 Full Binary Tree：滿的二元樹，所有的 leaf(最外層的子節點)都有一樣的深度。  
 &nbsp;  
-&nbsp;  
 Max Heap：是個 complete binary tree，且每個 node 都要比自己的 child 來得大，最大的值必定在第一個 root。  
-&nbsp;  
 &nbsp;  
 tree traversal 樹的遍歷法  
 &nbsp;  
 1.breadth-first tree traversal 寬度優先遍歷法
 2.depth-first tree traversl 深度優先遍歷法  
-&nbsp;  
 &nbsp;
 第二種又有  
 2-1. preorder 中左右  

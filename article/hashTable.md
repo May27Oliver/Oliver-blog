@@ -58,7 +58,12 @@ func (h *HashTable) Delete(s string){
 	h.array[index].delete(s)
 }
 
-//hash
+/*
+hash
+比較簡單的hash function直接將key的string每個字所代表的asc code轉成數字加總，除上要擺進的陣列的總長取餘數，即可算出這個key要擺在陣列第幾位，遇到collision則放入該位置的Linked List內。
+比較複雜的Multiplication Method，讓key總和乘上0~1之間的無理數，去掉整數位，會拿到一個介於0~1的數字，再乘上m，會得到0~m-1之間的一個整數，這個整數就是index。Multiplacation Method的隨意性比較高，安全性也高。
+*/
+
 func hash(val string)int{
 	sum := 0
 	for _,v := range val{

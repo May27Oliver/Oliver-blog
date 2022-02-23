@@ -64,6 +64,7 @@ export const BlogTopics: ContentsType[] = [
       { title: "Merge Sort", id: "merge-sort" },
       { title: "Heap Sort", id: "heap-sort" },
       { title: "Quick Sort", id: "quick-sort" },
+      { title: "Binary Search Tree", id: "binary-search-tree" },
     ],
   },
   {
@@ -90,10 +91,10 @@ export const BlogTopics: ContentsType[] = [
     topic: "Dart",
     subTopic: [{ title: "Dart", id: "Dart" }],
   },
-  {
-    topic: "面試經歷",
-    subTopic: [{ title: "2020", id: "2020" }],
-  },
+  // {
+  //   topic: "面試經歷",
+  //   subTopic: [{ title: "2020", id: "2020" }],
+  // },
   {
     topic: "專案經歷",
     subTopic: [{ title: "2020", id: "寶碩" }],

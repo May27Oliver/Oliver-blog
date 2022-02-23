@@ -23,6 +23,8 @@ Heap sort
 maxHeapifyDown 是 O(log n)  
 maxHeapifyUp 也是 O(log n)
 
+8 Heap sort 是種寬度優先的樹狀遍歷法(breadth-first tree traversal)
+
 ```go
 type MaxHeap struct {
 	arr []int

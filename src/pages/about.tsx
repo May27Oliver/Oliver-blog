@@ -75,6 +75,31 @@ const AboutPage: NextPage = () => (
             Building the immediately updated stock marquee system for securities
             company.
           </li>
+          <li className="job-content list-disc leading-[1.5]">
+            Create new features,new user friendly interfaces on financial apps
+            using post-css, Websocket and JSON.
+          </li>
+          <li className="job-content list-disc leading-[1.5]">
+            Build the backend system for Stock system using Golang and MySQL.
+          </li>
+          <li className="job-content list-disc leading-[1.5]">
+            Debug and maintain apps and websites and apps for Bank clients.
+          </li>
+          <li className="job-content list-disc leading-[1.5]">
+            Share new IT skills with colleagues, and do some inner education
+            training major on frontend.
+          </li>
+          <li className="job-content list-disc leading-[1.5]">
+            Build frontend animation with GSAP library, and take care of the
+            website performance.
+          </li>
+          <li className="job-content list-disc leading-[1.5]">
+            Use new convenient tools such as Docker on the Developing process.
+          </li>
+          <li className="job-content list-disc leading-[1.5]">
+            Working directly with the Business Unit to develop technical
+            solutions for financial cases.
+          </li>
         </ul>
       </div>
       <div className="work-exp mb-10 p-10 lg:py-0 leading-[1.5]">
@@ -100,6 +125,18 @@ const AboutPage: NextPage = () => (
           <li className="job-content list-disc my-2">
             Developed user interface of QMS and made quality management easier
             by saving human resoures and time in factories.
+          </li>
+          <li className="job-content list-disc my-2">
+            Built customized functional websites for clients with specific
+            needs.
+          </li>
+          <li className="job-content list-disc my-2">
+            Connect the device base APIs such as opening camera, scanning QRCode
+            and reading file on mobile phone and PDAs by javascript, cordova.
+          </li>
+          <li className="job-content list-disc my-2">
+            Debugged and maintained package software, and updated hotfix files
+            between versions.
           </li>
         </ul>
       </div>

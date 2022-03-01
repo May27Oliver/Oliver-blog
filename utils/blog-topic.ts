@@ -30,6 +30,15 @@ export const BlogTopics: ContentsType[] = [
     ],
   },
   {
+    topic: "Firebase",
+    subTopic: [
+      {
+        title: "Firebase in React Native",
+        id: "firebase-crashlytics",
+      },
+    ],
+  },
+  {
     topic: "Next.js",
     subTopic: [
       {

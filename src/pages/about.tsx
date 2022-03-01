@@ -71,32 +71,32 @@ const AboutPage: NextPage = () => (
             institutions like Bank SinoPac(永豐銀行),build by
             React,Typescript,this project I focus on front-end.
           </li>
-          <li className="job-content list-disc leading-[1.5]">
+          <li className="job-content list-disc my-2 leading-[1.5]">
             Building the immediately updated stock marquee system for securities
             company.
           </li>
-          <li className="job-content list-disc leading-[1.5]">
+          <li className="job-content list-disc my-2 leading-[1.5]">
             Create new features,new user friendly interfaces on financial apps
             using post-css, Websocket and JSON.
           </li>
-          <li className="job-content list-disc leading-[1.5]">
+          <li className="job-content list-disc my-2 leading-[1.5]">
             Build the backend system for Stock system using Golang and MySQL.
           </li>
-          <li className="job-content list-disc leading-[1.5]">
+          <li className="job-content list-disc my-2 leading-[1.5]">
             Debug and maintain apps and websites and apps for Bank clients.
           </li>
-          <li className="job-content list-disc leading-[1.5]">
+          <li className="job-content list-disc my-2 leading-[1.5]">
             Share new IT skills with colleagues, and do some inner education
             training major on frontend.
           </li>
-          <li className="job-content list-disc leading-[1.5]">
+          <li className="job-content list-disc my-2 leading-[1.5]">
             Build frontend animation with GSAP library, and take care of the
             website performance.
           </li>
-          <li className="job-content list-disc leading-[1.5]">
+          <li className="job-content list-disc my-2 leading-[1.5]">
             Use new convenient tools such as Docker on the Developing process.
           </li>
-          <li className="job-content list-disc leading-[1.5]">
+          <li className="job-content list-disc my-2 leading-[1.5]">
             Working directly with the Business Unit to develop technical
             solutions for financial cases.
           </li>

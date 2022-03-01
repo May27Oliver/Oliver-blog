@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import BlogLeftSideColumn from "src/components/BlogLeftSide";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { fas } from "@fortawesome/free-solid-svg-icons";
@@ -7,6 +8,7 @@ import { GetStaticProps, GetStaticPaths } from "next";
 import BlogContent from "src/components/BlogContent";
 import fs from "fs";
 import path from "path";
+import goTop from "public/image/goTop.png";
 import { useBlogInfoStateContext } from "src/context/BlogInfo";
 interface BlogProps {
   blog: string;
@@ -45,13 +47,22 @@ const BlogPages: React.FC<BlogProps> = ({ blog }) => {
           }}
         />
       </div>
+      {/* back to top */}
+      <div
+        className="fixed bottom-10 right-10 bg-goTop w-20 h-20 z-50"
+        onClick={() => {
+          document.getElementById("blog-center-content").scrollTop = 0;
+        }}
+      >
+        <Image src={goTop} width={50} height={100} objectFit="contain" />
+      </div>
     </Layout>
   );
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
   //告訴dynamic route這裡要產生多少頁面。
-  const files = fs.readdirSync(path.join("article"));
+  const files = await fs.readdirSync(path.join("article"));
   const paths = files.map((filename) => ({
     params: {
       blog: filename.replace(".md", ""),
@@ -67,7 +78,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params: { blog } }) => {
   //如果讀不到這個檔案就會出錯
   try {
-    const markdown = fs.readFileSync(
+    const markdown = await fs.readFileSync(
       path.join("article", blog + ".md"),
       "utf-8"
     );

@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "nprogress/nprogress.css";
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC");
 
 @layer utilities {
@@ -47,6 +48,10 @@ html {
 /* scrollbar */
 ::-webkit-scrollbar {
   width: 0;
+}
+
+#nprogress .bar {
+  background-color: linear-gradient(to right, #060470, #50b7d6);
 }
 
 .blog-center-content::-webkit-scrollbar {
@@ -168,7 +173,14 @@ html {
 .react-markdown a {
   @apply text-xl text-blue-900 my-3;
 }
-
+@media screen and (min-width: 768px) {
+  .react-markdown img {
+    width: 50%;
+  }
+  .react-markdown img:hover {
+    width: 80%;
+  }
+}
 /* 攝影 */
 @media screen and (min-width: 1024px) {
   .hamburgur {

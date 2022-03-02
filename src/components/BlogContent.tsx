@@ -22,9 +22,9 @@ const Content: React.FC<BlogContentType> = ({
     data: { slug, title, date, description },
   } = matter(bgcontent);
 
-  const columnRef = React.useRef<HTMLDivElement>(null);
-  const anchor = React.useRef<HTMLDivElement>(null);
-  const goTopRocket = React.useRef<HTMLDivElement>(null);
+  const columnRef = React.useRef<HTMLDivElement | null>(null);
+  const anchor = React.useRef<HTMLDivElement | null>(null);
+  const goTopRocket = React.useRef<HTMLDivElement | null>(null);
 
   React.useEffect(() => {
     let options = {
@@ -33,6 +33,9 @@ const Content: React.FC<BlogContentType> = ({
       threshold: 0,
     };
     let observer = new IntersectionObserver((entry) => {
+      if (!goTopRocket.current || !anchor.current || !columnRef.current) {
+        return;
+      }
       const { intersectionRatio } = entry[0];
       if (intersectionRatio <= 0) {
         goTopRocket.current.style.display = "block";
@@ -41,6 +44,7 @@ const Content: React.FC<BlogContentType> = ({
       }
     }, options);
     observer.observe(anchor.current);
+    return () => observer.disconnect();
   }, []);
   return (
     <div

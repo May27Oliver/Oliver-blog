@@ -76,7 +76,10 @@ export const getStaticProps: GetStaticProps = async ({ params: { blog } }) => {
     let _title: string;
     if (typeof blog === "string") {
       _title = blog.replace("-", " ");
+      _title = _title[0].toUpperCase() + _title.slice(1);
     }
+    console.log("_title", _title);
+
     const markdown = await fs.readFileSync(
       path.join("article", blog + ".md"),
       "utf-8"

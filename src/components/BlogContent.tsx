@@ -86,7 +86,7 @@ const Content: React.FC<BlogContentType> = ({
       {/* back to top */}
       <div
         ref={goTopRocket}
-        className="fixed bottom-10 right-10 bg-goTop w-20 h-20 z-50"
+        className="fixed bottom-10 right-[-100px] md:right-10 bg-goTop w-20 h-20 z-50"
         onClick={() => {
           columnRef.current.scrollTop = 0;
         }}

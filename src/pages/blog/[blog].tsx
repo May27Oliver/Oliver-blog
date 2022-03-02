@@ -42,23 +42,14 @@ const BlogPages: React.FC<BlogProps> = ({ blog }) => {
             size="lg"
           />
         </div>
-        {/* left-nav
+        {/* left-nav*/}
         <BlogLeftSideColumn
           openList={openList}
           triggerOpenList={(bool: boolean) => {
             setOpenList(bool);
           }}
-        /> */}
+        />
       </div>
-      {/* back to top */}
-      {/* <div
-        className="fixed bottom-10 right-10 bg-goTop w-20 h-20 z-50"
-        onClick={() => {
-          columnRef.current.scrollTop = 0;
-        }}
-      >
-        <Image src={goTop} width={50} height={100} objectFit="contain" />
-      </div> */}
     </Layout>
   );
 };

@@ -10,15 +10,15 @@ import path from "path";
 import { useBlogInfoStateContext } from "src/context/BlogInfo";
 interface BlogProps {
   blog: string;
+  _title: string;
 }
 
-const BlogPages: React.FC<BlogProps> = ({ blog }) => {
+const BlogPages: React.FC<BlogProps> = ({ blog, _title }) => {
   const { title } = useBlogInfoStateContext();
   const [openList, setOpenList] = React.useState<Boolean>(true);
   const blogRef = React.useRef<HTMLDivElement>(null);
-  const titleRef = React.useRef<string | null>(null);
   return (
-    <Layout title={`${titleRef.current || title} | Oliver雜貨鋪`}>
+    <Layout title={`${_title || title} | Oliver雜貨鋪`}>
       <div ref={blogRef} className="h-[100vh] overflow-hidden">
         <div className="desktop h-nav-height mt-[60px] flex flex-row overflow-hidden">
           <BlogLeftSideColumn
@@ -28,7 +28,6 @@ const BlogPages: React.FC<BlogProps> = ({ blog }) => {
             }}
           />
           <BlogContent
-            titleRef={titleRef.current}
             blogRef={blogRef.current}
             bgcontent={blog || "無資料"}
             openList={openList}
@@ -74,12 +73,16 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params: { blog } }) => {
   //如果讀不到這個檔案就會出錯
   try {
+    let _title: string;
+    if (typeof blog === "string") {
+      _title = blog.replace("-", " ");
+    }
     const markdown = await fs.readFileSync(
       path.join("article", blog + ".md"),
       "utf-8"
     );
     return {
-      props: { blog: markdown },
+      props: { blog: markdown, _title },
     };
   } catch (err) {
     console.log(err);

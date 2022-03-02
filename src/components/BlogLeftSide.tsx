@@ -114,10 +114,6 @@ const SubTopicLayer: React.FC<SubTopicType> = ({ select, subTopic }) => {
               payload: { title: topic.title, keyname: topic.id },
             });
             router.push(`/blog/${topic.id}`, undefined, { shallow: false });
-            //部落格文字欄位回到頂端
-            // document.getElementsByClassName(
-            //   "blog-center-content"
-            // )[0].scrollTop = 0;
           }}
         >
           {topic.title}

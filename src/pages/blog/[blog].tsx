@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import BlogLeftSideColumn from "src/components/BlogLeftSide";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { fas } from "@fortawesome/free-solid-svg-icons";
@@ -8,7 +7,6 @@ import { GetStaticProps, GetStaticPaths } from "next";
 import BlogContent from "src/components/BlogContent";
 import fs from "fs";
 import path from "path";
-import goTop from "public/image/goTop.png";
 import { useBlogInfoStateContext } from "src/context/BlogInfo";
 interface BlogProps {
   blog: string;
@@ -17,9 +15,10 @@ interface BlogProps {
 const BlogPages: React.FC<BlogProps> = ({ blog }) => {
   const { title } = useBlogInfoStateContext();
   const [openList, setOpenList] = React.useState<Boolean>(true);
+  const blogRef = React.useRef<HTMLDivElement>(null);
   return (
     <Layout title={`${title} | Oliver雜貨鋪`}>
-      <div className="h-[100vh] overflow-hidden">
+      <div ref={blogRef} className="h-[100vh] overflow-hidden">
         <div className="desktop h-nav-height mt-[60px] flex flex-row overflow-hidden">
           <BlogLeftSideColumn
             openList={openList}
@@ -27,7 +26,11 @@ const BlogPages: React.FC<BlogProps> = ({ blog }) => {
               setOpenList(bool);
             }}
           />
-          <BlogContent bgcontent={blog || "無資料"} openList={openList} />
+          <BlogContent
+            blogRef={blogRef.current}
+            bgcontent={blog || "無資料"}
+            openList={openList}
+          />
           {/* <div className="hidden flex-blog-right-side border border-solid border-slate-300 lg:block"></div> */}
         </div>
       </div>
@@ -39,23 +42,23 @@ const BlogPages: React.FC<BlogProps> = ({ blog }) => {
             size="lg"
           />
         </div>
-        {/* left-nav */}
+        {/* left-nav
         <BlogLeftSideColumn
           openList={openList}
           triggerOpenList={(bool: boolean) => {
             setOpenList(bool);
           }}
-        />
+        /> */}
       </div>
       {/* back to top */}
-      <div
+      {/* <div
         className="fixed bottom-10 right-10 bg-goTop w-20 h-20 z-50"
         onClick={() => {
-          document.getElementById("blog-center-content").scrollTop = 0;
+          columnRef.current.scrollTop = 0;
         }}
       >
         <Image src={goTop} width={50} height={100} objectFit="contain" />
-      </div>
+      </div> */}
     </Layout>
   );
 };

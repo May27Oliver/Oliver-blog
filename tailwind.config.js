@@ -32,7 +32,6 @@ module.exports = {
       },
       backgroundImage: {
         linkedIn: "url('/public/image/linkedin.png')",
-        goTop: "url(/public/image/goTop.png)",
       },
     },
   },

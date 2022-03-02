@@ -10,18 +10,21 @@ type BlogContentType = {
   openList: Boolean;
   bgcontent: string;
   blogRef: HTMLDivElement;
+  titleRef: string | null;
 };
 
 const Content: React.FC<BlogContentType> = ({
   bgcontent,
   openList,
   blogRef,
+  titleRef,
 }) => {
   const {
     content,
     data: { slug, title, date, description },
   } = matter(bgcontent);
 
+  titleRef = title;
   const columnRef = React.useRef<HTMLDivElement | null>(null);
   const anchor = React.useRef<HTMLDivElement | null>(null);
   const goTopRocket = React.useRef<HTMLDivElement | null>(null);

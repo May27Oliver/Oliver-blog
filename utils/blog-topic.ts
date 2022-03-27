@@ -74,6 +74,7 @@ export const BlogTopics: ContentsType[] = [
       { title: "Heap Sort", id: "heap-sort" },
       { title: "Quick Sort", id: "quick-sort" },
       { title: "Binary Search Tree", id: "binary-search-tree" },
+      { title: "Graph", id: "graph" },
     ],
   },
   {

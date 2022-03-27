@@ -74,6 +74,7 @@ export const getStaticProps: GetStaticProps = async ({ params: { blog } }) => {
   //如果讀不到這個檔案就會出錯
   try {
     let _title: string;
+    console.log("blog", blog);
     if (typeof blog === "string") {
       _title = blog.replace("-", " ");
       _title = _title[0].toUpperCase() + _title.slice(1);
@@ -83,6 +84,7 @@ export const getStaticProps: GetStaticProps = async ({ params: { blog } }) => {
       path.join("article", blog + ".md"),
       "utf-8"
     );
+    console.log("markdown", markdown);
     return {
       props: { blog: markdown, _title },
     };

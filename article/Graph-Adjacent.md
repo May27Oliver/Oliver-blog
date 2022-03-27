@@ -1,6 +1,6 @@
 ---
 slug: Algorithm
-title: Graph
+title: Graph Adjacent
 description:
 date: 27 March 2022
 ---
@@ -9,19 +9,22 @@ date: 27 March 2022
 
 Graph 是更完整的 Tree，Graph 有很多種，有類似像 HashTable 那樣的 adjacent list，也有雙重 edge 的 adjacent matrix。
 
-1. graph 是個抽象的資料類別
-2. graph 是個有限的集合(a finite set of vertices) 3.在 graph 的點和點之間相連的線，稱之為 edges，
-   如果線是有方向性的，則稱為 arrow，graph 則稱為 directive graph。
-3. graph 就是有形成 cycle 的 tree
-4. adjacency list 可以用來實現 graph，類似一個 hashTable 的結構，首先有個陣列，陣列裡每個值都是一個陣列，用來表達圖上相鄰的節點 vertex
-5. adjacency matrix 用雙重陣列來記載 graph，每個節點在 matrix 上都得成對一個節點，紀錄彼此的相臨關係。
-   參考資料：
-   https://www.youtube.com/watch?v=JDP1OVgoa0Q
+參考資料：
+https://www.youtube.com/watch?v=JDP1OVgoa0Q
 
 ```go
 package main
 
 import "fmt"
+/*
+1.graph是個抽象的資料類別
+2.graph是個有限的集合(a finite set of vertices)
+3.在graph的點和點之間相連的線，稱之為edges，
+如果線是有方向性的，則稱為arrow，graph則稱為directive graph。
+4.graph就是有形成cycle的tree
+5.adjacency list可以用來實現graph，類似一個hashTable的結構，首先有個陣列，陣列裡每個值都是一個陣列，用來表達塗上相鄰的節點vertex
+6.adjacency matrix用雙重陣列來記載graph，每個節點在matrix上都得成對一個節點，紀錄彼此的相臨關係。
+*/
 
 //Graph represents an adjacency list graph
 type Graph struct {
